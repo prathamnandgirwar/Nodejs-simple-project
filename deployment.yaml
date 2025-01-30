@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: prathamnandgiwar/my-note-app:latest"
+        image: prathamnandgiwar/my-note-app:latest
         resources:
           limits:
             memory: "128Mi"
