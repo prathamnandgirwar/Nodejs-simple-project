@@ -3,12 +3,14 @@ kind: Service
 metadata:
   name: myapp-service
 spec:
-  type: LoadBalancer
+  type: NodePort  # Change as needed (ClusterIP, LoadBalancer)
   selector:
     app: myapp
   ports:
-    - port: 80
+    - name: http  # ✅ REQUIRED: Add a name for each port
+      port: 80
       targetPort: 8000
-      protocol: TCP
-
-
+      nodePort: 30285
+    - name: metrics  # ✅ REQUIRED: If you have multiple ports, name each one
+      port: 9090
+      targetPort: 9090
