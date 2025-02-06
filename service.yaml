@@ -8,7 +8,7 @@ spec:
     app: myapp
   ports:
     - name: http  # ✅ REQUIRED: Add a name for each port
-      port: 80
+      port: 8000
       targetPort: 8000
       nodePort: 30200
   
