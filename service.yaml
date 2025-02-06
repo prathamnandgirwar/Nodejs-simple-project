@@ -11,6 +11,4 @@ spec:
       port: 80
       targetPort: 8000
       nodePort: 30200
-    - name: metrics  # ✅ REQUIRED: If you have multiple ports, name each one
-      port: 9090
-      targetPort: 9090
+  
